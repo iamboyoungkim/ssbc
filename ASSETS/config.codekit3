@@ -427,6 +427,23 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/less\/_variables.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/less\/_variables.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
 	"\/less\/bootstrap-less\/.csscomb.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -1711,23 +1728,6 @@
 		"oA": 2,
 		"oAP": "\/less\/my-less\/test1.html",
 		"oF": 0
-		},
-	"\/less\/variables.less": {
-		"aP": 0,
-		"bl": 0,
-		"dJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/less\/variables.css",
-		"oF": 0,
-		"oS": 0,
-		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
 		}
 	},
 "hooks": [
