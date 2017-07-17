@@ -12,6 +12,11 @@
 		>p >a{
 			color:#fff;
 			font-size: 1.3em;
+
+			letter-spacing: 0.07em;
+		}
+		@media (max-width: @screen-xs-max) {
+			left: 10px;
 		}
 	}
 
@@ -27,19 +32,49 @@
 				>a {
 					display: inline-block;
 					color: #fff;
+					font-size: 0.7em;
+					letter-spacing: 0.07em;
 				}
 			}
 		}
+		@media (max-width: @screen-xs-max) {
+			right: 10px;
+		}
+		@media (max-width: 400px) {
+			display: none;
+		}
 
 	}
+
+
 }
+
+
+
+
 .header-main-wrapper{
+	min-width: 400px;
 	height: 360px;
 	background: #191919 url('../img/children.jpg') center center no-repeat;
+
+	@media (max-width: @screen-xs-max) {
+		background: #191919 url('../img/children_sm.jpg') center center no-repeat;
+	}
+
+
+
 	background-size:cover;
 	position:relative;
 
 	.welcome-msg {
+		>hr {
+		width: 150px;
+		height: 1.5px;
+		background-color: @brand-primary;
+		margin-right: 0;
+		border: none;
+	}
+
 		position:absolute;
 		top:0;
 		right:40px;
@@ -61,27 +96,44 @@
 		>p {
 			font-size: 0.9em;
 		}
+
+		@media (max-width: @screen-xs-max) {
+			width: 350px;
+			right: 20px;
+	}
 	}
 
 }
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
 
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+
+    background: transparent;
+    border: 1.5px solid @brand-primary;
+    color: @brand-primary;
+    text-align: center;
+
+    font: 32px Arial, sans-serif;
+}
 .main-navigation-wrapper {
 
 	height: 60px;
 	text-align: center;
-		
+	background: @gray-lighter;	
 	.main-navigation-container {
+		display: inline-block;
 		>p {
 			float: left;
-			position: relative;
-			top: 0;
-			left: 80px;
-			display: inline-block;
 			padding: 15px;
 			color: @brand-primary;
 			text-transform: uppercase;
 			font-size: 1em;
-		}
+			font-weight: bold;
+		}//GRADE LEVEL
 		.level-container{
 			display: inline-block;
 			>ul {
@@ -89,13 +141,26 @@
 				>li {
 					margin: 10px;
 					float:left;
-					>a{
+					>a{	
 						display: inline-block;
 						font-size: 1.5em;
+						text-decoration: none;
+						padding: 5px;
+						&:hover{
+							background-color: @brand-primary;
+							color: #fff;
+						}
 					}
 				}
 			}
+		}//level container
+	
+	}
+	@media(max-width: @screen-xs-max) {
+		height: 200px;
+		>li{
+			float: top;
 		}
-		
+
 	}
 }

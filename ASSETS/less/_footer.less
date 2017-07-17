@@ -1,53 +1,65 @@
 .footer-main-column {
-	height: 60px;
-	padding: 10px;
-	font-size: @font-size-small;
-	position:relative;
+	height: 80px;
 
 	background-color: @brand-primary;
 
-	>ul {
-		position: absolute;
-		top: 5px;
-		list-style:none;
-		margin-bottom: 0px;
+	padding: 10px;
+	color: #fff;
 
-		>li {
-			color: #fff;
+
+	.container {
+		text-align: center;
+		>h2, >p, >a{
 			display: inline-block;
-			padding: 0px 10px;
 
+		}
+		>h2{
+			font-size: 1.5em;
+			text-transform: uppercase;
+			margin: 20px 20px;
+
+		}
+		>p {
+			font-size: 1.3em;
+
+		}
+		>a {
+			font-size: 0.8em;
+			text-transform: uppercase;
+
+
+		}
+	}	
+
+	@media(max-width: @screen-xs-max){
+		height : 120px;
+		min-width: 400px;
+		position:relative;
+		h2 {
+			positon :absolute;
+			//float: left;
+			top: 50px;
 			
-			>h2,
-			>a {
-				text-transform: uppercase;
-			}
-			>h2{
+		}
+		p{
+			width: 200px;
+			float: right;
 
-				margin: 0;
-				font-size: 1.5em;
-			}
-			>p {
-				font-size: 1.3em;
-			}
-			>a {
-				font-size: 0.8em;	
-				position: relative;
-				top: 10px;
-			}
+		}
+		.btn {
+			top: 50px;
+
 		}
 	}
-
 	
 }
 
 .footer-copy-column {
-	height: 60px;
-	margin-left: 80px;
-	>p{
-		color: @brand-primary;
-		margin-bottom: 0;
-	}
-	padding: 10px;
+	height: 80px;
+	position: relative;
 
+	>p{
+		text-align: center;
+		color: @brand-primary;
+	}
 }
