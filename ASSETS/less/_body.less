@@ -1,19 +1,12 @@
-.container{
-  width: 100%;
-  height: 100%;
-  //padding: 2em 2em;
-}
-/*
-.panel-wrapper{
-  .make-row();
-}*/
+@import "_variables.less";
+@import "bootstrap-less/mixins.less";
+
 
 .panel{
   .make-xs-column(12);
   .make-sm-column(12);
-  .make-md-column(3);
-  .make-lg-column(3);
-  margin: 0.5em 0.5em;
+  .make-md-column(4);
+  .make-lg-column(4);
 }
 
 .panel {
@@ -35,6 +28,7 @@
     font-size: 1em;
     color: white;
     line-height: 0.01em;
+    margin-top: 1em;
   }
 }
 
@@ -55,19 +49,18 @@
   height: 3em;
 
 }
-
 .glyphicon, .star-rating-wrapper{
   position: relative;
 }
 
 .glyphicon{
-  width: 80%;
+  width: 70%;
   float: left;
 }
 
 .star-rating-wrapper{
   float: right;
-  width: 20%;
+  width: 30%;
   height: 1em;
   color: #c5c5c5;
   font-size: 1em;
@@ -96,16 +89,17 @@
   width: attr(rating);
   overflow: hidden;
 }
-
-.paging-wrapper {
+.pagination-wrapper{
   display: inline-block;
   width: 100%;
-  float: left;
-  left: 340%;
 
-  position: relative;
 }
-.paging-wrapper a {
+.pagination-container{
+  padding-left: 60%;
+  //position: relative;
+}
+
+.pagination-container a {
   color: @brand-primary;
   float: left;
   padding: 0.5em 1em;
@@ -113,14 +107,24 @@
   transition: background-color .3s;
   border: 1px solid #dddddd;
 }
-.paging-wrapper a.active {
+.pagination-container a.active {
     background-color: #c0c0c0;
     color: blue;
     border-radius: 0.3em;
     border: 1px solid #c0c0c0;
 }
-.paging-wrapper a:hover:not(.active) {
+.pagination-container a:hover:not(.active) {
     background-color: @brand-primary;
     border-radius: 0.3em;
     color: white;
+}
+
+.info-head {
+  font-family: "Times New Roman";
+  font-style: italic;
+  margin-bottom: 30px;
+  margin-left: 45px;
+  color: grey;
+  font-size: 1.7em;
+  font-weight: 500;
 }

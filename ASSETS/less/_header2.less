@@ -1,0 +1,191 @@
+@import "_variables.less";
+@import "bootstrap-less/mixins.less";
+
+//
+//banner
+//
+
+.container{
+  margin: 0 auto;
+  width: 80%;
+  padding: 1em;
+}
+.banner-wrapper {
+  background-color: @brand-primary;
+  height: 5em;
+}
+
+.banner-container{
+  a {
+    color: white;
+  }
+}
+
+.logo-wrapper{
+  .make-lg-column(6);
+  .make-md-column(6);
+  .make-sm-column(6);
+  .make-xs-column(12);
+  float: left;
+}
+.logo-container {
+  >a {
+    font-size: 2em;
+    font-weight:bold;
+  }
+}
+
+.utility-nav-wrapper{
+  .make-lg-column(6);
+  .make-md-column(6);
+  .make-sm-column(6);
+  .make-xs-column(12);
+
+}
+
+.utility-nav-container{
+  >ul {
+    list-style: none;
+    display: inline-block;
+    float: right;
+    margin-top: 0.8em;
+
+    >li {
+      float: left;
+      margin-left: 1.5em;
+
+    }
+  }
+
+  @media (max-width: @screen-xs-max) {
+    display: none;
+  }
+}
+
+//
+//header
+//
+
+.header-main-wrapper {
+  height: 30em;
+
+}
+
+.welcome-msg-wrapper{
+  float: right !important;
+  .make-lg-column(6);
+  .make-md-column(6);
+  .make-sm-column(9);
+  .make-xs-column(12);
+}
+
+.welcome-msg-container {
+  text-align: right;
+  color: white;
+
+
+  >h1 {
+    text-transform: uppercase;
+  }
+  >hr {
+    width: 150px;
+    height: 1.5px;
+    background-color: @brand-primary;
+    margin-right: 0;
+    border: none;
+  }
+  >p{
+    width: 100%;
+    font-size: 1em;
+    letter-spacing: 0.07em;
+  }
+  >a{
+    text-transform: uppercase;
+    font-size: 0.5em;
+  }
+}
+.smile-children-wrapper {
+  position: absolute;
+  top:5em;
+  left: 0;
+  max-width:100%;
+  height: 30em;
+  max-height: 30em;
+  font-weight: auto;
+  z-index: -1;
+
+  img{width: 100%; height:100%; max-height: 100%;}
+
+}
+
+
+//
+//main-nav
+//
+
+.main-navigation-wrapper {
+  height: 7em;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid lightgrey;
+}
+.main-navigation-container {
+
+  text-align: center;
+  >div{
+    display: inline-block;
+    >p{
+      color: @brand-primary;
+      text-transform: uppercase;
+      font-size:1.2em;
+      font-weight: 500;
+    }
+  }
+
+
+  .level-container {
+    > ul {
+      list-style: none;
+      >li{
+        text-decoration: none;
+        display: inline-block;
+
+        >a{
+          &:hover{
+            background-color: @brand-primary;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//
+//etc
+//
+.numberCircle {
+  border-radius: 50%;
+  behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  margin-left: 1em;
+  background: transparent;
+  border: 1.5px solid @brand-primary;
+  color: @brand-primary;
+  text-align: center;
+
+  font: 25px Arial, sans-serif;
+}
+.triangle {
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 1500px 0 0;
+  border-color: @brand-primary transparent transparent transparent;
+
+}
