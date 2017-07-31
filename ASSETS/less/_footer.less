@@ -1,65 +1,69 @@
-.footer-main-column {
-	height: 80px;
+@import "_variables.less";
+@import "bootstrap-less/mixins.less";
 
-	background-color: @brand-primary;
-
-	padding: 10px;
-	color: #fff;
-
-
-	.container {
-		text-align: center;
-		>h2, >p, >a{
-			display: inline-block;
-
-		}
-		>h2{
-			font-size: 1.5em;
-			text-transform: uppercase;
-			margin: 20px 20px;
-
-		}
-		>p {
-			font-size: 1.3em;
-
-		}
-		>a {
-			font-size: 0.8em;
-			text-transform: uppercase;
-
-
-		}
-	}	
-
-	@media(max-width: @screen-xs-max){
-		height : 120px;
-		min-width: 400px;
-		position:relative;
-		h2 {
-			positon :absolute;
-			//float: left;
-			top: 50px;
-			
-		}
-		p{
-			width: 200px;
-			float: right;
-
-		}
-		.btn {
-			top: 50px;
-
-		}
-	}
-	
+.footer-main-column-wrapper {
+  background-color: @brand-primary;
+}
+.footer-copy-column-wrapper{
+  background-color: #f3f3f3;
 }
 
-.footer-copy-column {
-	height: 80px;
-	position: relative;
+.footer-main-column-container {
+  color: white;
 
-	>p{
-		text-align: center;
-		color: @brand-primary;
-	}
+  .teacher{
+    .make-lg-column(2);
+    .make-md-column(2);
+    .make-sm-column(2);
+    .make-xs-column(12);
+    padding: 0;
+  }
+
+  .submit{
+    .make-lg-column(8);
+    .make-md-column(8);
+    .make-sm-column(8);
+    .make-xs-column(12);
+    text-align: center;
+
+  }
+
+  .learn{
+    .make-lg-column(2);
+    .make-md-column(2);
+    .make-sm-column(2);
+    .make-xs-column(12);
+
+    @media (max-width: @screen-xs-max) {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  .teacher>h2 {
+    font-size: 2em;
+    font-weight:bold;
+    text-transform: uppercase;
+    float: left;
+    padding: 0;
+  }
+  .submit>p{
+    font-size: 1.4em;
+  }
+  .learn>a{
+    text-transform: uppercase;
+    width: 140px;
+    float: right;
+  }
+
+
+}
+
+.footer-copy-column-container{
+  color: @brand-primary;
+  height: 5em;
+
+  >p{
+    padding-top: 1em;
+  }
 }
